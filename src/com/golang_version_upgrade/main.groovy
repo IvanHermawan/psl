@@ -6,7 +6,11 @@ def main(script) {
     stage('GO-Version'){
         def root = tool type: "go", name: "${GO_VERSION}"
         withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"]) {
-            sh 'go version'
+            //sh 'go version'
+            sh """
+            pwd
+            go version
+            """
         }
     }  
 }
