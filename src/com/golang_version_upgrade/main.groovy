@@ -10,6 +10,7 @@ def main(script) {
             sh """
             pwd
             go version
+            git --version
             """
         }
     }  
